@@ -3,14 +3,12 @@ import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { USER_API_END_POINT } from "../utils/Constant";
 import { toast } from "react-toastify";
-import { AuthContext } from "../context/AuthProvider";
 
 function Login() {
   // State for form fields
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const { login } = useContext(AuthContext);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
