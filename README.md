@@ -28,11 +28,8 @@ A full-stack web application that allows sellers to register, log in, create pro
 
 ---
 
-## 🛠️ Setup Instructions
-
-### 🔧 Backend
-
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Ashish32507/deploy.git](https://github.com/Ashish32507/deploy.git
+   git clone https://github.com/Ashish32507/deploy.git
    cd deploy/backend
+   npm run dev
