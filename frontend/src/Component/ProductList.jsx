@@ -1,11 +1,13 @@
 import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
+import { AuthContext } from "../context/AuthProvider";
 import { PRODUCT_API_END_POINT } from "../utils/Constant";
 import { useNavigate } from "react-router-dom";
 
 function ProductList() {
   const [products, setProducts] = useState([]);
   const [editId, setEditId] = useState(null);
+  const { user } = useContext(AuthContext);
   const navigate = useNavigate();
   const [editData, setEditData] = useState({
     name: "",

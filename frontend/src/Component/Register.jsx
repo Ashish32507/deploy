@@ -20,6 +20,7 @@ function Register() {
       });
       toast.success(response.data.message);
       navigate("/login");
+
       setName("");
       setEmail("");
       setPassword("");
