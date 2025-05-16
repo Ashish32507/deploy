@@ -19,7 +19,7 @@ function Register() {
         password,
       });
       toast.success(response.data.message);
-      navigate("/login");
+      navigate("/");
 
       setName("");
       setEmail("");
