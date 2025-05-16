@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { USER_API_END_POINT } from "../utils/Constant";
 import axios from "axios";
 import { toast } from "react-toastify";
@@ -8,6 +8,7 @@ function Register() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -18,6 +19,7 @@ function Register() {
         password,
       });
       toast.success(response.data.message);
+      navigate("/login");
       setName("");
       setEmail("");
       setPassword("");
